@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "npm test",
-    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
-    "start": "node src/index.ts"
+    "dev": "ts-node-dev --respawn --transpile-only src/index",
+    "start": "node builds/src/index"
   },
   "repository": {
     "type": "git",
