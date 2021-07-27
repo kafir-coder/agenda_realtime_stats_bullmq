@@ -1,0 +1,27 @@
+{
+  "name": "agenda_realtime_stats_bullmq",
+  "version": "1.0.0",
+  "description": "The agenda realtime statistics generator implemented with bullmq for queue processing",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kafir-coder/agenda_realtime_stats_bullmq.git"
+  },
+  "author": "Caio Tony",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kafir-coder/agenda_realtime_stats_bullmq/issues"
+  },
+  "homepage": "https://github.com/kafir-coder/agenda_realtime_stats_bullmq#readme",
+  "devDependencies": {
+    "@vercel/node": "^1.11.1",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "bullmq": "^1.40.0",
+    "dotenv": "^10.0.0"
+  }
+}
