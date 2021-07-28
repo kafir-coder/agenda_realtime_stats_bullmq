@@ -6,7 +6,8 @@
   "scripts": {
     "test": "npm test",
     "dev": "ts-node-dev --respawn --transpile-only src/index",
-    "start": "node builds/src/index"
+    "http": "node ./builds/src/index.js",
+    "worker": "node ./builds/src/worker.js"
   },
   "repository": {
     "type": "git",
