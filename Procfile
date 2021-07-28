@@ -1,2 +1,2 @@
-web: node ./builds/src/index.js
-workers: node ./builds/src/worker.js
+web: npm run start
+workers: npm run worker
