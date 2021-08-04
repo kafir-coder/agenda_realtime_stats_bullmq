@@ -9,6 +9,7 @@ import throng from 'throng';
 var WORKERS = process.env.WEB_CONCURRENCY || 4;
 
 async function worker () {
+  console.log(`Worker started at ${process.pid}`)
   new Worker('hi', async (job: Job) => {
     const commandsPipe = job.data;
     await redis_connection.pipeline([
@@ -21,9 +22,16 @@ async function worker () {
     ]).exec()
   }, {connection: redis_connection});
 }
+function master() {
+  console.log(`Master started at ${process.pid}`)
 
+  process.on('beforeExit', () => {
+    console.log('Master cleanup.')
+  })
+}
 throng({
   worker: worker,
+  master: master,
   count: WORKERS as number,
   lifetime: Infinity
 });
